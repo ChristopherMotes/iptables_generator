@@ -1,0 +1,5 @@
+FILTER		= snmpd - [0:0]
+JUMP		= -A INPUT -p tcp -m tcp --dport 199 -j snmpd 
+JUMP		= -A INPUT -p udp -m udp --dport 161 -j snmpd 
+LOG		= -A snmpd -j LOG --log-prefix "dropped_snmpd_ips: " 
+DROP		= -A snmpd -j DROP 

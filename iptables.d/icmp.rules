@@ -1,0 +1,6 @@
+FILTER		= icmp - [0:0]
+JUMP		= -A INPUT -p icmp -j icmp 
+DROP		= -A icmp -p icmp -m icmp --icmp-type 13 -j DROP 
+DROP		= -A icmp -p icmp -m icmp --icmp-type 14 -j DROP 
+DROP		= -A icmp -j REJECT --reject-with icmp-host-prohibited 
+

@@ -1,0 +1,4 @@
+FILTER		= netbackup - [0:0]
+JUMP		= -A INPUT -p tcp -m tcp -m multiport --dports 13724,13782,1556,1557,35202 -j netbackup
+LOG		= -A netbackup -j LOG --log-prefix "dropped_netbackup_ips: " 
+DROP		= -A netbackup -j DROP 

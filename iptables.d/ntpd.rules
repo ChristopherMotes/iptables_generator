@@ -1,0 +1,4 @@
+FILTER		= ntpd - [0:0]
+JUMP		= -A INPUT -p udp -m udp --dport 123 -j ntpd
+LOG		= -A ntpd -j LOG --log-prefix "dropped_ntpd_ips: " 
+DROP		= -A ntpd -j DROP 

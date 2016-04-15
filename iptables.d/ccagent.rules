@@ -1,0 +1,4 @@
+FILTER		= ccagent - [0:0]
+JUMP		= -A INPUT -p tcp -m tcp --dport 8063 -j ccagent
+LOG		= -A ccagent -j LOG --log-prefix "dropped_ccagent_ips: " 
+DROP		= -A ccagent -j DROP 
