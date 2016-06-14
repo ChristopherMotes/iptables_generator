@@ -6,7 +6,7 @@ Summary:        configures IP tables
 Group:          System Environment/Libraries
 License:        Commercial
 #Source:         https://github/ChristopherMotes/iptables_generator/repository/archive.tar.gz
-Source:         https://github.com/ChristopherMotes/iptables_generator/archive/master.zip
+Source0:         https://github.com/ChristopherMotes/iptables_generator/archive/master.zip
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 
@@ -40,8 +40,6 @@ install -m 644 iptables.d/sshd.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 %defattr(-,root,root)
 %dir /etc/sysconfig/iptables.d
 /usr/local/sbin/iptables_generator.pl
-/etc/sysconfig/iptables.d/cam.rules
-/etc/sysconfig/iptables.d/ccagent.rules
 /etc/sysconfig/iptables.d/default_filters.def
 /etc/sysconfig/iptables.d/default_rules.def
 /etc/sysconfig/iptables.d/encase.rules
@@ -50,16 +48,12 @@ install -m 644 iptables.d/sshd.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 /etc/sysconfig/iptables.d/icmp.rules
 /etc/sysconfig/iptables.d/netbackup.acpts
 /etc/sysconfig/iptables.d/netbackup.rules
-/etc/sysconfig/iptables.d/nrpe.acpts
-/etc/sysconfig/iptables.d/nrpe.rules
 /etc/sysconfig/iptables.d/ntpd.acpts
 /etc/sysconfig/iptables.d/ntpd.rules
 /etc/sysconfig/iptables.d/snmpd.acpts
 /etc/sysconfig/iptables.d/snmpd.rules
 /etc/sysconfig/iptables.d/sshd.acpts
 /etc/sysconfig/iptables.d/sshd.rules
-/etc/sysconfig/iptables.d/sysedge.acpts
-/etc/sysconfig/iptables.d/sysedge.rules
 
 %changelog
 * Fri Feb 26 2016 Christopher Motes <christopher.motes@motes.gov> - %{name}-1.0.2
