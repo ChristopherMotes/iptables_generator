@@ -14,7 +14,7 @@ BuildArch:      noarch
 Provides a perl script with a .d like function for iptables configuration.
 
 %prep
-%setup -n %{name}.git
+%setup -n %{name}-master
 
 %install
 [ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
