@@ -1,6 +1,6 @@
 %global source_dir  %{_datadir}/%{name}-source
 Name:           iptables_generator
-Version:        1.0.0
+Version:        1.0.2
 Release:        0%{?dist}
 Summary:        configures IP tables
 Group:          System Environment/Libraries
@@ -15,6 +15,7 @@ Provides a perl script with a .d like function for iptables configuration.
 
 %prep
 %setup -n %{name}-master
+%define _unpackaged_files_terminate_build 0
 
 %install
 [ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
@@ -42,7 +43,6 @@ install -m 644 iptables.d/sshd.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 /usr/local/sbin/iptables_generator.pl
 /etc/sysconfig/iptables.d/default_filters.def
 /etc/sysconfig/iptables.d/default_rules.def
-/etc/sysconfig/iptables.d/encase.rules
 /etc/sysconfig/iptables.d/global_accepts.acpts
 /etc/sysconfig/iptables.d/icmp.acpts
 /etc/sysconfig/iptables.d/icmp.rules
