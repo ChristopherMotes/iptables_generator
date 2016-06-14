@@ -29,16 +29,12 @@ install -m 644 iptables.d/icmp.acpts $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/icmp.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/netbackup.acpts $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/netbackup.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
-install -m 644 iptables.d/nrpe.acpts $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
-install -m 644 iptables.d/nrpe.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/ntpd.acpts $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/ntpd.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/snmpd.acpts $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/snmpd.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/sshd.acpts $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/sshd.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
-install -m 644 iptables.d/sysedge.acpts $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
-install -m 644 iptables.d/sysedge.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 
 %files
 %defattr(-,root,root)
