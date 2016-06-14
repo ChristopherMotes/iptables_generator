@@ -21,12 +21,9 @@ Provides a perl script with a .d like function for iptables configuration.
 install -m 755 -d $RPM_BUILD_ROOT/etc/sysconfig/iptables.d
 install -m 755 -d $RPM_BUILD_ROOT/usr/local/sbin/
 install -m 755 bin/iptables_generator.pl $RPM_BUILD_ROOT/usr/local/sbin/
-install -m 644 iptables.d/cam.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
-install -m 644 iptables.d/ccagent.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/default_filters.def $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/default_rules.def $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/default_rules.def $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
-install -m 644 iptables.d/encase.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/global_accepts.acpts $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/icmp.acpts $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
 install -m 644 iptables.d/icmp.rules $RPM_BUILD_ROOT/etc/sysconfig/iptables.d/
