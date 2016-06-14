@@ -5,7 +5,8 @@ Release:        0%{?dist}
 Summary:        configures IP tables
 Group:          System Environment/Libraries
 License:        Commercial
-Source:         https://github/ChristopherMotes/iptables_generator/repository/archive.tar.gz
+#Source:         https://github/ChristopherMotes/iptables_generator/repository/archive.tar.gz
+Source:         https://github.com/ChristopherMotes/itpables_generator/archive/master.zip
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 
